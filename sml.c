@@ -38,6 +38,7 @@ int main()
     }   
 
     while(fscanf(homelistings, "%d, %d, %[^,], %d, %d, %d, %d ", &zip, &id, address, &price, &bed, &bath, &area) != EOF)
+    {
 	if (area < 1000)
 	{
 	    fprintf(small, "%s : %d\n", address, area);	    
@@ -50,7 +51,7 @@ int main()
 	{
             fprintf(large, "%s : %d\n", address, area);
 	}
-
+    }
     fclose(homelistings);
     fclose(small);
     fclose(med);
